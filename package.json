@@ -4,6 +4,7 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "npm run copy-files && tsc",
+    "copy-files": "cp src/manifest.json dist/ && cp -r src/images dist/"
   }
 }

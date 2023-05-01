@@ -3,7 +3,7 @@
   "name": "link to calil",
   "version": "1.0",
   "description": "Get ISBN from the webpage and open it on Calil in a new tab",
-  "permissions": ["activeTab", "contextMenus"],
+  "permissions": ["activeTab", "contextMenus", "scripting"],
   "action": {
     "default_icon": {
       "16": "images/icon16.png",
@@ -17,7 +17,6 @@
     "128": "images/icon128.png"
   },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   }
 }
