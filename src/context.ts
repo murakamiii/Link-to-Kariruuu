@@ -15,9 +15,9 @@ function getISBNFromSelection(): string | null {
     return null;
 }
 
-const isbn = getISBNFromSelection() || getISBNDromURL();
-if (isbn) {
-    const calilUrl = `https://calil.jp/book/${isbn}`;
+const _isbn = getISBNFromSelection() || getISBNDromURL();
+if (_isbn) {
+    const calilUrl = `https://calil.jp/book/${_isbn}`;
     window.open(calilUrl, '_blank');
 } else {
     alert('ISBNが見つかりませんでした');

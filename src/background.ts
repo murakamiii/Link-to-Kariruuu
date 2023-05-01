@@ -2,7 +2,7 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "link to Calil",
         title: "Calilで見る",
-        contexts: ["page"],
+        contexts: ["page", "selection"],
     });
 });
 
