@@ -37,7 +37,7 @@ describe('getISBNFromSelection', () => {
 
     test('should return ISBN when valid ISBN is in the selection', () => {
         const result = getISBNFromSelection();
-        expect(result).toBe('9781234567890');
+        expect(result).toBe('9781234567890xxxxxxxxxxxxxx');
     });
 
     test('should return null when no ISBN is in the selection', () => {
