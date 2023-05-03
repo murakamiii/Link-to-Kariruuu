@@ -26,10 +26,13 @@ jobs:
           git tag $TAG_NAME
           git push --tags
           echo "::set-output name=tag_name::$TAG_NAME"
+      - name: Create ZIP
+        run: |
+          zip -r dist.zip dist
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/*
+          files: dist.zip
           tag_name: ${{ steps.create_tag.outputs.tag_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
