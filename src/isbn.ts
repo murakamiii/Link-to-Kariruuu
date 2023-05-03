@@ -13,6 +13,6 @@ export function getISBNFromSelection(): string | null {
 
 function getISBN(text: string): string | null {
     const isbnPattern = /(97(8|9))?\d{9}(\d|X)/g;
-    const matches = text.match(isbnPattern);
+    const matches = text.replace(/-/g, '').match(isbnPattern);
     return matches ? matches[0] : null;
 }
