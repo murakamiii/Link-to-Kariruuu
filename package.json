@@ -8,7 +8,7 @@
     "typescript": "^5.0.4"
   },
   "scripts": {
-    "build": "npm run copy-files && tsc",
+    "build": "mkdir -p dist && npm run copy-files && tsc",
     "copy-files": "cp src/manifest.json dist/ && cp -r src/images dist/",
     "test": "jest"
   }
