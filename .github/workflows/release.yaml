@@ -22,7 +22,7 @@ jobs:
       - name: Create tag
         id: create_tag
         run: |
-          TAG_NAME=$(date +"%Y.%m.%d.%H.%M")
+          TAG_NAME=$(date +"%Y.%m%d.%H%M")
           git tag $TAG_NAME
           git push --tags
           echo "::set-output name=tag_name::$TAG_NAME"

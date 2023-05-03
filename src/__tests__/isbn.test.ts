@@ -40,6 +40,21 @@ describe('getISBNFromSelection', () => {
         expect(result).toBe('9781234567890');
     });
 
+    test('should return ISBN when valid ISBN with hyphens is in the selection', () => {
+        Object.defineProperty(window, 'getSelection', {
+            value: () => {
+                return {
+                    toString: () => {
+                        return '978-1234-5678-90';
+                    },
+                };
+            },
+            writable: true,
+        });
+        const result = getISBNFromSelection();
+        expect(result).toBe('9781234567890');
+    });
+
     test('should return null when no ISBN is in the selection', () => {
         // mocking window.getSelection
         Object.defineProperty(window, 'getSelection', {
