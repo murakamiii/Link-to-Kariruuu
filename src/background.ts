@@ -17,7 +17,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "link to Calil") {
         chrome.scripting.executeScript({
             target: { tabId: tabId },
-            files: ["context.js"],
+            files: ["content.js"],
         });
     }
 });
