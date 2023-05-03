@@ -17,9 +17,17 @@ jobs:
         run: npm ci
       - name: Run build
         run: npm run build
+      - name: Create tag
+        id: create_tag
+        run: |
+          TAG_NAME=$(date +"%Y.%m.%d.%H.%M")
+          git tag $TAG_NAME
+          git push --tags
+          echo "::set-output name=tag_name::$TAG_NAME"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: dist/*
+          tag_name: ${{ steps.create_tag.outputs.tag_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
