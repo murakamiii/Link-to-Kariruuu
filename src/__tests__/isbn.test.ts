@@ -27,7 +27,7 @@ describe('getISBNFromSelection', () => {
     Object.defineProperty(window, 'getSelection', {
         value: () => {
             return {
-                toString: () => {
+                toString: (): string => {
                     return '9781234567890';
                 },
             };
@@ -44,7 +44,7 @@ describe('getISBNFromSelection', () => {
         Object.defineProperty(window, 'getSelection', {
             value: () => {
                 return {
-                    toString: () => {
+                    toString: (): string => {
                         return '978-1234-5678-90';
                     },
                 };
@@ -60,7 +60,7 @@ describe('getISBNFromSelection', () => {
         Object.defineProperty(window, 'getSelection', {
             value: () => {
                 return {
-                    toString: () => {
+                    toString: (): string => {
                         return '';
                     },
                 };
