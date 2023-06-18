@@ -6,7 +6,7 @@
 
 ### GitHubリリースからインストールする場合
 
-1. [リリースページ](https://github.com/your-repo/link-to-calil/releases)から最新の`dist.zip`をダウンロードします。
+1. [リリースページ](https://github.com/murakamiii/link-to-calil/releases)から最新の`dist.zip`をダウンロードします。
 2. ダウンロードした`dist.zip`を適当な場所で解凍します。
 3. Chromeで`chrome://extensions/`にアクセスし、右上の「デベロッパーモード」スイッチをオンにします。
 4. 「パッケージ化されていないアプリを読み込む」ボタンをクリックし、解凍した`dist`ディレクトリを選択します。
